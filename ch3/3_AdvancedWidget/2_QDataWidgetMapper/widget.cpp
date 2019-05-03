@@ -65,17 +65,17 @@ void Widget::setupModel()
            << "<qt>47338 Park Avenue<br/>Big City</qt>"
            << "<qt>Research Station<br/>Base Camp<br/>Big Mountain</qt>";
 
-QStringList types;
-types << "0" << "1" << "2" << "0" << "2";
+    QStringList types;
+    types << "0" << "1" << "2" << "0" << "2";
 
-for (int row = 0; row < 5; ++row) {
-    QStandardItem *item = new QStandardItem(names[row]);
-    model->setItem(row, 0, item);
-    item = new QStandardItem(addresses[row]);
-    model->setItem(row, 1, item);
-    item = new QStandardItem(types[row]);
-    model->setItem(row, 2, item);
-}
+    for (int row = 0; row < 5; ++row) {
+        QStandardItem *item = new QStandardItem(names[row]);
+        model->setItem(row, 0, item);
+        item = new QStandardItem(addresses[row]);
+        model->setItem(row, 1, item);
+        item = new QStandardItem(types[row]);
+        model->setItem(row, 2, item);
+    }
 }
 
 void Widget::updateButtons(int row)
